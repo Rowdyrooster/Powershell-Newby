@@ -53,7 +53,7 @@ $NumberDays=120
 $CSVFileLocation='C:\TEMP\OldComps.CSV'
 Search-ADAccount -AccountInactive -TimeSpan 120 -UsersOnly | Where-Object { $_.Enabled -eq $True } | Format-Table Name, UserPrincipalName
 pause}
-"5"{Get-ADUser -Id <User here> -properties Manager | Select Manager
+"5"{Get-ADUser -Id User here -properties Manager | Select Manager
 pause}
 "6"{IPconfig /all
 pause}
