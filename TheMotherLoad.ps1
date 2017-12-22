@@ -15,15 +15,15 @@ Write-Host " ~(:Stay Tuned More to Come :)~"
 Do {
 Write-Host "
 ----------Active Directory Options----------
-1 = AD Pwassword Randomizer
-2 = AD Users Disabled
-3 = AD Computers inactive for 120 days
-4 = AD Users Inactive for 120 days
-5 = AD Search Manager
-6 = IPconfig
-7 = Tracert -j <IP HERE>
-8 = AD Computers Active
-9 = AD Users Active
+ 1 = AD Pwassword Randomizer
+ 2 = AD Users Disabled
+ 3 = AD Computers inactive for 120 days
+ 4 = AD Users Inactive for 120 days
+ 5 = AD Search Manager
+ 6 = IPconfig
+ 7 = Tracert -j <IP HERE>
+ 8 = AD Computers Active
+ 9 = AD Users Active
 10 = AD Group Members #Detailed list of users within a group
 11 = AD User Removal
 12 = AD User Disable
