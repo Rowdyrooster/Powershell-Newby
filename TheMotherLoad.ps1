@@ -1,3 +1,7 @@
+write-Host "Admin Credentials Are Required to Continue" 
+
+Get-Credential -Message "ALT Credentials Are Required to Continue"
+
 Write-Host "
 {}}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}}
 {}                                                {}
@@ -74,7 +78,7 @@ pause}
 pause}
 "14"{New-ADUser -Name Test -AccountPassword (Read-Host -AsSecureString "AccountPassword") -Manager "Tester" -EmailAddress "Test@contoso.com" -DisplayName "Test" -UserPrincipalName "Test"
 pause}
-"15"{Get-ADuser -Filter {passwordneverexpires -and enabled -eq $true}|FT SamAccountName, Description 
+"15"{Search-ADAccount -passwordneverexpires |FT SamAccountName, Description 
 pause}
 }
 
