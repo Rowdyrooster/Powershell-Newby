@@ -45,19 +45,12 @@ Switch ($choice1) {
 
 "2" {Get-ADUser -Filter {Enabled -eq $false} | FT samAccountName
 pause}
-
 "3" {$COMPAREDATE=GET-DATE
-#
 Search-ADAccount -AccountInactive -TimeSpan 120 -ComputersOnly | Where-Object { $_.Enabled -eq $True } | Format-Table Name, UserPrincipalName
 pause}
-
-
 "4"{$COMPAREDATE=GET-DATE
-#
 $NumberDays=120
-#
 $CSVFileLocation='C:\TEMP\OldComps.CSV'
-#
 Search-ADAccount -AccountInactive -TimeSpan 120 -UsersOnly | Where-Object { $_.Enabled -eq $True } | Format-Table Name, UserPrincipalName
 pause}
 "5"{Get-ADUser -Id <User here> -properties Manager | Select Manager
