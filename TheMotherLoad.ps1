@@ -29,10 +29,11 @@ Write-Host "
 12 = AD User Disable
 13 = AD User Enable
 14 = AD User Creation
+15 = AD PSW Never Expires
 --------------------------"
 $choice1 = read-host -prompt "Select number & press enter
 Or Press Q to quit"
-} until ($choice1 -eq "1" -or $choice1 -eq "2" -or $choice1 -eq "3" -or $choice1 -eq "4" -or $choice1 -eq "5" -or $choice1 -eq "6" -or $choice1 -eq "7" -or $choice1 -eq "8" -or $choice1 -eq "9" -or $choice1 -eq "10" -or $choice -eq "11" -or $choice1 -eq "12" -or $choice1 -eq "13" -or $choice1 -eq "14")
+} until ($choice1 -eq "1" -or $choice1 -eq "2" -or $choice1 -eq "3" -or $choice1 -eq "4" -or $choice1 -eq "5" -or $choice1 -eq "6" -or $choice1 -eq "7" -or $choice1 -eq "8" -or $choice1 -eq "9" -or $choice1 -eq "10" -or $choice -eq "11" -or $choice1 -eq "12" -or $choice1 -eq "13" -or $choice1 -eq "14" -or $choice1 -eq "15")
 
 
 Switch ($choice1) {
@@ -72,6 +73,8 @@ pause}
 "13"{Enable-ADAccount -Identity USER HERE
 pause}
 "14"{New-ADUser -Name Test -AccountPassword (Read-Host -AsSecureString "AccountPassword") -Manager "Tester" -EmailAddress "Test@contoso.com" -DisplayName "Test" -UserPrincipalName "Test"
+pause}
+"15"{Get-ADuser -Filter {passwordneverexpires -and enabled -eq $true}|FT SamAccountName, Description 
 pause}
 }
 
