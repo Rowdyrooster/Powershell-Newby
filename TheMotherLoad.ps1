@@ -65,6 +65,7 @@ pause}
 pause}
 "9"{Get-ADUser -Filter {Enabled -eq $True}| FT samAccountName
 pause}
+}
 
 
 
