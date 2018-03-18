@@ -75,7 +75,7 @@ pause}
 pause}
 "13"{Enable-ADAccount -Identity USER HERE
 pause}
-"14"{New-ADUser -Name Test -AccountPassword (Read-Host -AsSecureString "AccountPassword") -Manager "Manager Name" -EmailAddress "Test@contoso.com" -DisplayName "Test" -GivenName Joshua -Surname Montgomery -Description IT -Office AuburnOps -ho -UserPrincipalName "Test" -CannotChangePassword $False -ChangePasswordAtLogon $True -Title Clerck -Department IT -Company UCB -Enabled $True 
+"14"{New-ADUser -Name Test -AccountPassword (Read-Host -AsSecureString "AccountPassword") -Manager "Manager Name" -EmailAddress "Test@contoso.com" -DisplayName "Test" -GivenName Test -Surname Test -Description IT -Office Test -ho -UserPrincipalName "Test" -CannotChangePassword $False -ChangePasswordAtLogon $True -Title Clerck -Department Test -Company Test -Enabled $True 
 pause}
 "15"{$Session = New-PSSession -ComputerName Name Here -Credential $cred
 Copy-Item -Path File Path here -Destination Destination here -ToSession $Session -Verbose
