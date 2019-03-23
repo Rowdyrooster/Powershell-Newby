@@ -1,0 +1,2 @@
+$output = Get-WsusServer | Invoke-WsusServerCleanup -CleanupObsoleteComputers -CleanupObsoleteUpdates -CleanupUnneededContentFiles -CompressUpdates -DeclineExpiredUpdates -DeclineSupersededUpdates -verbose
+Send-MailMessage -from "WSUS PS Cleanup <Email@email.com>" -to "Email@email.com" -Subject "WSUS Cleanup Stats" -Body ($output | Out-String) -SmtpServer Server.com
